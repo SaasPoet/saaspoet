@@ -7,6 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4  # Changed from v3 to v4
+      - uses: actions/checkout@v4
       - name: Run a simple test
         run: echo "Hello, this is a test!"
