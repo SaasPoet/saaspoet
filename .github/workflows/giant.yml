@@ -1,0 +1,18 @@
+name: CI Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend  # point to where package.json lives
+    steps:
+      - uses: actions/checkout@v5
+      - run: npm test
+
+
